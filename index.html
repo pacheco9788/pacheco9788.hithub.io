@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALUD CAMIRI - Directorio de Centros de Salud</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-hospital-user"></i> SALUD CAMIRI
+        </div>
+        <nav class="navbar">
+            <button class="nav-btn active" onclick="cambiarTab('inicio')"><i class="fa-solid fa-house"></i> Inicio</button>
+            <button class="nav-btn" onclick="cambiarTab('hospital')"><i class="fa-solid fa-hospital"></i> Hospital General</button>
+            <button class="nav-btn" onclick="cambiarTab('clinicas')"><i class="fa-solid fa-user-doctor"></i> Clínicas Privadas</button>
+            <button class="nav-btn" onclick="cambiarTab('farmacias')"><i class="fa-solid fa-pills"></i> Farmacias</button>
+            <button class="nav-btn" onclick="cambiarTab('postas')"><i class="fa-solid fa-house-medical"></i> Postas y Centros</button>
+        </nav>
+    </header>
+
+    <!-- BANNER DE IMÁGENES ROTATIVO (CADA 10 SEGUNDOS) -->
+    <div class="carousel-container">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto\,hospital1.jpeg');">
+            <div class="slide-content">
+                <h2>Atención Médica en Camiri, Santa Cruz</h2>
+                <p>Tu portal informativo de salud para la Capital Petrolera de Bolivia.</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto\,hospital4.jpeg');">
+            <div class="slide-content">
+                <h2>Servicios de Urgencia 24 Horas</h2>
+                <p>Encuentra rápido los centros de atención y especialidades disponibles.</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto\,hospital5.jpeg');">
+            <div class="slide-content">
+                <h2>Red de Farmacias y Centros de Primer Nivel</h2>
+                <p>Ubicación exacta, horarios de atención y datos de contacto directo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL DE PESTAÑAS -->
+    <main class="main-container">
+
+        <!-- PESTAÑA: INICIO -->
+        <section id="tab-inicio" class="tab-content active">
+            <div class="welcome-box">
+                <h1>Bienvenido a SALUD CAMIRI</h1>
+                <p>La plataforma interactiva donde encontrarás la información médica actualizada de la ciudad de Camiri, provincia Cordillera, departamento de Santa Cruz, Bolivia.</p>
+                <button class="btn-iniciar" onclick="cambiarTab('hospital')">
+                    <i class="fa-solid fa-circle-play"></i> Iniciar Exploración
+                </button>
+            </div>
+
+            <h2 class="section-title">Directorio de Servicios de Salud</h2>
+            <div class="cards-grid">
+                
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-hospital-triangle"></i></div>
+                    <h3>Hospital General de Camiri</h3>
+                    <p>Centro asistencial principal de segundo nivel con atención de emergencias e internación.</p>
+                    <button class="btn-card" onclick="cambiarTab('hospital')">Más Información <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-clinic-medical"></i></div>
+                    <h3>Clínicas Privadas</h3>
+                    <p>Consultorios y centros médicos especializados particulares en el municipio de Camiri.</p>
+                    <button class="btn-card" onclick="cambiarTab('clinicas')">Más Información <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+                    <h3>Farmacias de Camiri</h3>
+                    <p>Puntos de venta de medicamentos de patente y servicio de turno en la ciudad.</p>
+                    <button class="btn-card" onclick="cambiarTab('farmacias')">Más Información <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-stethoscopes"></i></div>
+                    <h3>Postas y Centros de Salud</h3>
+                    <p>Centros urbanos de primer nivel para atención preventiva y medicina general.</p>
+                    <button class="btn-card" onclick="cambiarTab('postas')">Más Información <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PESTAÑA: HOSPITAL GENERAL -->
+        <section id="tab-hospital" class="tab-content">
+            <div class="detail-header">
+                <h2><i class="fa-solid fa-hospital"></i> Hospital General de Camiri (Segundo Nivel)</h2>
+                <span class="badge red">Atención 24/7</span>
+            </div>
+            
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <h3><i class="fa-solid fa-stethoscope"></i> Especialidades Disponibles</h3>
+                    <ul>
+                        <li>Medicina General e Interna</li>
+                        <li>Cirugía General</li>
+                        <li>Pediatría y Neonatología</li>
+                        <li>Ginecología y Obstetricia</li>
+                        <li>Traumatología</li>
+                        <li>Unidad de Urgencias y Emergencias</li>
+                        <li>Laboratorio Clínico y Radiografía</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3><i class="fa-solid fa-clock"></i> Horarios de Atención</h3>
+                    <p><strong>Emergencias:</strong> Abierto las 24 Horas, los 365 días del año.</p>
+                    <p><strong>Consultas Externas:</strong> Lunes a Viernes de 08:00 a 16:00.</p>
+                    <p><strong>Atención SUS:</strong> Sistema Único de Salud disponible con derivación.</p>
+                </div>
+
+                <div class="detail-card full-width">
+                    <h3><i class="fa-solid fa-location-dot"></i> Ubicación Exacta y Contacto</h3>
+                    <p><strong>Dirección:</strong> Av. Humberto Suárez Roca / Zona Central, Camiri, Santa Cruz, Bolivia.</p>
+                    <p><strong>Teléfono de Referencia:</strong> (591) 3 952-2020 / Línea Directa Emergencias</p>
+                    <div class="map-responsive">
+                        <iframe src="https://maps.google.com/maps?q=Camiri+Santa+Cruz+Bolivia+Hospital&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PESTAÑA: CLÍNICAS PRIVADAS -->
+        <section id="tab-clinicas" class="tab-content">
+            <h2 class="section-title"><i class="fa-solid fa-user-doctor"></i> Clínicas Privadas en Camiri</h2>
+            
+            <div class="list-container">
+                
+                <!-- Clínica 1 -->
+                <div class="info-box">
+                    <div class="info-header">
+                        <h3>Clínica Señor de la Vera Cruz</h3>
+                        <span class="badge blue">Sector Privado</span>
+                    </div>
+                    <p><strong>Especialidades:</strong> Consulta Médica General, Pediatría, Medicina Familiar y Ecografías.</p>
+                    <p><strong>Horarios:</strong> Lunes a Sábado de 08:00 a 20:00.</p>
+                    <p><strong>Ubicación:</strong> Zona Central, Camiri, Bolivia.</p>
+                </div>
+
+                <!-- Clínica 2 -->
+                <div class="info-box">
+                    <div class="info-header">
+                        <h3>Clínica Rengel</h3>
+                        <span class="badge blue">Sector Privado</span>
+                    </div>
+                    <p><strong>Especialidades:</strong> Cirugía, Traumatología, Consultas Especializadas e Internación Corta.</p>
+                    <p><strong>Horarios:</strong> Lunes a Viernes de 08:00 a 19:00 / Emergencias a llamada.</p>
+                    <p><strong>Ubicación:</strong> Calle Ballivián, Camiri, Santa Cruz.</p>
+                </div>
+
+                <!-- Clínica 3 -->
+                <div class="info-box">
+                    <div class="info-header">
+                        <h3>Consultorios Especializados Camiri</h3>
+                        <span class="badge blue">Consultorios</span>
+                    </div>
+                    <p><strong>Especialidades:</strong> Gastroenterología, Odontología General, Ginecología.</p>
+                    <p><strong>Horarios:</strong> Mañanas de 08:30 a 12:30 | Tardes de 15:00 a 19:00.</p>
+                    <p><strong>Ubicación:</strong> Calle Mayor Camacho, Camiri.</p>
+                </div>
+
+            </div>
+
+            <div class="map-responsive" style="margin-top:20px;">
+                <iframe src="https://maps.google.com/maps?q=Camiri+Bolivia+clinica&t=&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- PESTAÑA: FARMACIAS -->
+        <section id="tab-farmacias" class="tab-content">
+            <h2 class="section-title"><i class="fa-solid fa-pills"></i> Farmacias Registradas en Camiri</h2>
+            
+            <div class="cards-grid">
+                
+                <div class="card item-detail">
+                    <h3>Farmacia Josefar</h3>
+                    <p><strong>Dirección:</strong> Av. Humberto Suárez Roca</p>
+                    <p><strong>Horarios:</strong> Lunes a Sábado: 08:00 - 12:30 / 15:00 - 20:00</p>
+                    <p><strong>Servicios:</strong> Venta de medicamentos, productos de higiene, toma de presión.</p>
+                </div>
+
+                <div class="card item-detail">
+                    <h3>Farmacia Chaco Farma</h3>
+                    <p><strong>Dirección:</strong> Zona Comercial Camiri</p>
+                    <p><strong>Horarios:</strong> Lunes a Domingo de 07:30 a 21:00</p>
+                    <p><strong>Servicios:</strong> Fármacos controlados, patente registrado, atención continua.</p>
+                </div>
+
+                <div class="card item-detail">
+                    <h3>Farmacia Santa Rita</h3>
+                    <p><strong>Dirección:</strong> Av. Humberto Suárez Roca</p>
+                    <p><strong>Horarios:</strong> Lunes a Sábado: 08:00 - 20:00</p>
+                    <p><strong>Servicios:</strong> Descuentos especiales y productos de cuidado personal.</p>
+                </div>
+
+                <div class="card item-detail">
+                    <h3>Farmacia 25 de Julio</h3>
+                    <p><strong>Dirección:</strong> Centro de Camiri</p>
+                    <p><strong>Horarios:</strong> Lunes a Sábado de 08:00 a 19:30</p>
+                    <p><strong>Servicios:</strong> Venta por menor de fármacos y patentes autorizados.</p>
+                </div>
+
+                <div class="card item-detail">
+                    <h3>Farmacia Divino Niño Jesús</h3>
+                    <p><strong>Dirección:</strong> Av. Principal Camiri</p>
+                    <p><strong>Horarios:</strong> Turnos rotativos / Atención diaria</p>
+                    <p><strong>Servicios:</strong> Suministros médicos y primeros auxilios.</p>
+                </div>
+
+            </div>
+
+            <div class="map-responsive" style="margin-top: 20px;">
+                <iframe src="https://maps.google.com/maps?q=Camiri+Bolivia+Farmacias&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- PESTAÑA: POSTAS Y CENTROS DE SALUD -->
+        <section id="tab-postas" class="tab-content">
+            <h2 class="section-title"><i class="fa-solid fa-house-medical"></i> Centros de Salud de Primer Nivel (SUS)</h2>
+            
+            <div class="list-container">
+                
+                <div class="info-box border-left-red">
+                    <div class="info-header">
+                        <h3>Centro de Salud Virgen de Fátima</h3>
+                        <span class="badge red">1er Nivel</span>
+                    </div>
+                    <p><strong>Ubicación:</strong> Calle Germán Busch casi Calle Manchego, Camiri, Santa Cruz.</p>
+                    <p><strong>Horarios:</strong> Atenciones programadas de 08:00 a 16:00.</p>
+                    <p><strong>Atenciones:</strong> Medicina general, vacunación, controles de embarazo y programas de enfermería.</p>
+                </div>
+
+                <div class="info-box border-left-red">
+                    <div class="info-header">
+                        <h3>Centro de Salud La Willian</h3>
+                        <span class="badge red">1er Nivel</span>
+                    </div>
+                    <p><strong>Ubicación:</strong> Av. Carlos Daher Harp (Barrio Villa El Carmen), Camiri.</p>
+                    <p><strong>Horarios:</strong> Lunes a Viernes 08:00 - 16:00.</p>
+                    <p><strong>Atenciones:</strong> Salud familiar comunitaria, nutrición infantil, atención ambulatoria.</p>
+                </div>
+
+                <div class="info-box border-left-red">
+                    <div class="info-header">
+                        <h3>Centro de Salud San Francisco</h3>
+                        <span class="badge red">1er Nivel</span>
+                    </div>
+                    <p><strong>Ubicación:</strong> Calle Francisco César Benedetti (Barrio Lindo), Camiri.</p>
+                    <p><strong>Horarios:</strong> Lunes a Viernes de 08:00 a 16:00.</p>
+                    <p><strong>Atenciones:</strong> Primeros auxilios, farmacia básica y controles integrales.</p>
+                </div>
+
+                <div class="info-box border-left-red">
+                    <div class="info-header">
+                        <h3>Centro de Salud Peña Blanca</h3>
+                        <span class="badge red">1er Nivel</span>
+                    </div>
+                    <p><strong>Ubicación:</strong> Calle Tatarenda e intersección Calle Boyuibe, Camiri.</p>
+                    <p><strong>Horarios:</strong> Lunes a Viernes 08:00 - 14:00.</p>
+                    <p><strong>Atenciones:</strong> Consultas comunitarias y medicina preventiva.</p>
+                </div>
+
+                <div class="info-box border-left-red">
+                    <div class="info-header">
+                        <h3>Centro de Salud San José Obrero / San José La Abra</h3>
+                        <span class="badge red">1er Nivel</span>
+                    </div>
+                    <p><strong>Ubicación:</strong> Barrio San José, Av. Ofman Antúnez y Calle Curupau, Camiri.</p>
+                    <p><strong>Horarios:</strong> Lunes a Viernes 08:00 - 16:00.</p>
+                    <p><strong>Atenciones:</strong> Odontología preventiva, medicina general, planificación familiar.</p>
+                </div>
+
+            </div>
+
+            <div class="map-responsive" style="margin-top: 20px;">
+                <iframe src="https://maps.google.com/maps?q=Camiri+Santa+Cruz+Centro+de+Salud&t=&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p><strong>SALUD CAMIRI</strong> &copy; 2026 - Guía Informativa de Salud en Camiri, Santa Cruz, Bolivia.</p>
+        <p class="small">Diseñado con HTML, CSS y JS | Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
